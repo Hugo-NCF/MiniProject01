@@ -95,14 +95,15 @@ p {
   /* Styles the links as blocks to fill the width */
   display: block;
   padding: 5px 5px; /* Adds padding inside each menu item */
-  background-color: #f4f4f4;
-  color: var(--colorgreen);
+
+  color: var(--blackcolor);
   text-decoration: none; /* Removes default underline */
   border-radius: 4px;
 }
 
 .vertical-menu a:hover {
-  background-color: #262424;
+  background-color: var(--colorgreen);
+    color: white;
 }
 .horizontal-menu li {
   padding: 10px 10px; /* Adds spacing around menu items */
@@ -261,6 +262,8 @@ footer {
   z-index: 999;
   display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
   background: var(--lightgrey); /* Optional background */
   /* max-width: fit-content; */
   gap: 20px;
@@ -269,7 +272,7 @@ footer {
     padding: 2rem;
 }
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: var(--blackcolor) solid;
     padding-top: 1.5rem;
     text-align: center;
 }
