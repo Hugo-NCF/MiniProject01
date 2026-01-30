@@ -140,6 +140,7 @@ p {
 .banner-image {
   width: 40vw;
   display: inline-block;
+  border-radius: 20px;
 }
 
 .plants {
