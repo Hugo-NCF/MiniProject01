@@ -274,7 +274,7 @@ button:hover {
 
 .news-letter-container::before {
   content: "";
-  background-image: url("../assets/news-letter-bg.png");
+  background-image: url("../assets/newscontainer.webp");
   background-size: cover;
   position: absolute;
   /* top: 0;
