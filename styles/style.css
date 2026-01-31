@@ -31,8 +31,9 @@ p {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 3rem;
-    color: white;
+  font-size: 3.5rem;
+  color: white;
+  letter-spacing: -0.02em;
 }
 .secondary-font {
   font-family: "Inter", sans-serif;
@@ -40,7 +41,8 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 1.1rem;
-    color: white;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
 }
 
 .logo {
@@ -65,15 +67,22 @@ p {
 
 .hero {
   width: 100%;
-  padding-top: 40px;
+  padding-top: 60px;
+  padding-right: 40px;
   display: flex;
-  align-items: self-end;
-  justify-content: baseline;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.hero h1 {
+  margin: 0;
+  line-height: 1.1;
 }
 
 .bottom-text {
-  justify-content: flex-end; /* Pushes content to the bottom */
+  max-width: 90%;
+  line-height: 1.8;
 }
 
 .special-color {
@@ -128,37 +137,54 @@ p {
 }
 
 .banner {
-  margin: 10px auto;
+  margin: 40px auto;
   display: grid;
   max-width: 90%;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  justify-items: flex-end;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 40px;
+  gap: 60px;
+  padding: 20px 0;
 }
 
 .banner-image {
-  width: 40vw;
-  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
   border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(166, 226, 46, 0.2);
 }
 
-.plants {
-  width: 80vw;
-  margin: 0 auto;
+.cleats {
+  width: 90%;
+  max-width: 1400px;
+  margin: 60px auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 40px 20px;
+}
+
+.cleats > h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cleats > p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  font-size: 1.2rem !important;
+  line-height: 1.8;
 }
 
 .category-title {
-  font-size: 1.8rem;
-  margin-top: 40px;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-top: 80px;
+  margin-bottom: 30px;
   text-align: left;
   width: 100%;
-  padding-left: 20px;
+  padding-left: 0;
 }
 .card {
     margin: 30px;
@@ -192,9 +218,10 @@ p {
 }
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-
+  width: 100%;
+  margin: 20px 0;
 }
 
 .card img {
@@ -292,43 +319,163 @@ footer {
 /* for smaller screen */
 @media screen and (max-width: 768px) {
   body {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
-    padding: auto;
+    padding: 10px;
   }
+
+  /* Make fonts smaller on mobile */
+  .primary-font {
+    font-size: 2rem;
+  }
+
+  .secondary-font {
+    font-size: 1rem;
+  }
+
+  /* Stack navbar vertically on mobile */
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+  }
+
+  .horizontal-menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
   .horizontal-menu li {
-    padding: 5px 5px; /* Adds spacing around menu items */
+    padding: 8px 5px;
+    text-align: center;
   }
 
+  /* Banner section */
   .banner {
-    width: fit-content;
-    display: flex; /* Hide an element on small screens */
-    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
     flex-direction: column-reverse;
-    justify-items: baseline;
-    align-items: flex-start;
-  }
-  .banner-image {
-    width: 90vw;
+    gap: 20px;
   }
 
+  .banner-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Hero section */
+  .hero {
+    padding-top: 20px;
+    padding-right: 0;
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .bottom-text {
+    max-width: 100%;
+  }
+
+  /* Products section */
+  .cleats {
+    width: 95%;
+    margin: 40px auto;
+    padding: 20px 10px;
+  }
+
+  .cleats > p {
+    width: 100% !important;
+    font-size: 1.1rem !important;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+    padding-left: 10px;
+  }
+
+  /* Cards grid - one column on mobile */
   .cards {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 5px;
-    padding: 5px;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .card {
+    margin: 10px;
+  }
+
+  .card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+
+  /* Newsletter section */
+  .news-letter-container {
+    height: auto;
+    min-height: 400px;
+    padding: 40px 20px;
+  }
+
+  .news-letter-container h1 {
+    font-size: 1.8rem;
+    text-align: center;
   }
 
   .email-div {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-  }
-  footer {
-    display: grid;
-    position: relative;
-    grid-template-columns: 1fr;
-    padding: 10px;
+    width: 100%;
     gap: 10px;
+  }
+
+  .email-div input {
+    width: 100% !important;
+    max-width: 300px;
+  }
+
+  .email-div button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Footer */
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+  }
+
+  footer img {
+    width: 80px !important;
+    height: auto !important;
+  }
+
+  .vertical-menu {
+    align-items: center;
+  }
+
+  .vertical-menu li {
+    max-width: 100%;
+  }
+
+  footer > div:last-child {
+    flex-direction: row !important;
+    gap: 15px !important;
+  }
+
+  .footer-bottom {
+    border-left: none;
+    border-top: var(--blackcolor) solid 1px;
+    padding-top: 15px;
+    width: 100%;
+    margin-top: 10px;
   }
 }
