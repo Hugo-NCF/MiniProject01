@@ -324,7 +324,7 @@ footer {
     padding: 10px;
   }
 
-  /* Make fonts smaller on mobile */
+
   .primary-font {
     font-size: 2rem;
   }
@@ -332,8 +332,7 @@ footer {
   .secondary-font {
     font-size: 1rem;
   }
-
-  /* Stack navbar vertically on mobile */
+  /* Navbar */
   .navbar {
     flex-direction: column;
     padding: 10px;
@@ -396,7 +395,7 @@ footer {
     padding-left: 10px;
   }
 
-  /* Cards grid - one column on mobile */
+  /* Cards grid */
   .cards {
     display: grid;
     grid-template-columns: 1fr;
