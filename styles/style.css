@@ -48,6 +48,15 @@ p {
 .logo {
   width: 110px; /* Set your desired width */
   height: auto; /* Automatically adjusts to prevent distortion */
+    display: flex;
+    justify-content:left;
+}
+.navbar-icons {
+    display: flex;
+    justify-content: right;
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin-left: 0; /* Removes default margin */
 }
 
 .navbar {
@@ -57,14 +66,18 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: nowrap;
   background: var(--lightgrey); /* Optional background */
   border-radius: 5px;
   margin: 10px auto;
   box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2); /* h v blur spread color */
 }
-
+.material-symbols-outlined{
+    vertical-align: middle;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
 .hero {
   width: 100%;
   padding-top: 60px;
@@ -313,7 +326,12 @@ footer {
     margin: 0;
     font-size: 14px
 }
-
+.icon {
+    height: 1rem;
+}
+.icon:hover {
+    color: var(--colorgreen);
+}
 
 
 /* for smaller screen */
@@ -338,7 +356,6 @@ footer {
     padding: 10px;
     position: relative;
   }
-
   .horizontal-menu {
     flex-direction: column;
     align-items: center;
