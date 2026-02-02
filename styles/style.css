@@ -46,37 +46,62 @@ p {
 }
 
 .logo {
-  width: 110px; /* Set your desired width */
-  height: auto; /* Automatically adjusts to prevent distortion */
-    display: flex;
-    justify-content:left;
-}
-.navbar-icons {
-    display: flex;
-    justify-content: right;
-    list-style: none; /* Removes bullet points */
-    padding: 0; /* Removes default padding */
-    margin-left: 0; /* Removes default margin */
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
 }
 
 .navbar {
-  position: fixed; /* helps keep the navbar stick to top*/
-  top: 0; /* helps keep the navbar stick to top*/
-  z-index: 999; /* Keeps navbar above other content */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  background: var(--lightgrey); /* Optional background */
-  border-radius: 5px;
-  margin: 10px auto;
-  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2); /* h v blur spread color */
+  justify-content: space-between;
+  background: var(--lightgrey);
+  padding: 8px 40px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
-.material-symbols-outlined{
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+.navbar-icons li a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgb(11, 13, 34);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.navbar-icons li a:hover {
+  color: var(--colorgreen);
+}
+.material-symbols-outlined {
     vertical-align: middle;
-    font-size: 1.3rem;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.navbar-icons .fa-cart-shopping {
+    font-size: 1rem;
 }
 .hero {
   width: 100%;
@@ -353,9 +378,19 @@ footer {
   /* Navbar */
   .navbar {
     flex-direction: column;
-    padding: 10px;
+    padding: 15px;
     position: relative;
+    gap: 10px;
   }
+
+  .nav-links {
+    order: 2;
+  }
+
+  .navbar-icons {
+    order: 3;
+  }
+
   .horizontal-menu {
     flex-direction: column;
     align-items: center;
