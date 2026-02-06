@@ -12,6 +12,9 @@ A website for selling soccer cleats from three top brands: Adidas, Nike, and Miz
 
 JHA Cleats is a website built to sell soccer cleats. The site features a dark background theme, creating a bold and modern look. The page is fully responsive, adapting from desktop to mobile screens.
 
+## Website Link (Using Netlify)
+https://jhacleats.netlify.app/
+
 ## Page Sections
 
 ### Navbar
